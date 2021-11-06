@@ -1,7 +1,7 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
-import {TabsPage} from './tabs.component';
+import { TabsPage } from './tabs.component';
 
 const routes: Routes = [
   {
@@ -14,6 +14,9 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
+          }, {
+            path: ':id',
+            loadChildren: () => import('../home-detail/home-detail.module').then(m => m.HomeDetailPageModule)
           }
         ]
       }

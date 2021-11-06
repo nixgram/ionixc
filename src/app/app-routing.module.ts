@@ -1,5 +1,5 @@
-import {NgModule} from '@angular/core';
-import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'splash',
     pathMatch: 'full'
   },
   {
@@ -22,10 +22,16 @@ const routes: Routes = [
   {
     path: 'app',
     loadChildren: () => import('./screens/tabs/tabs.module').then(m => m.TabsPageModule)
-  },  {
+  },
+  {
     path: 'splash',
-    loadChildren: () => import('./screens/splash/splash.module').then( m => m.SplashPageModule)
-  }
+    loadChildren: () => import('./screens/splash/splash.module').then(m => m.SplashPageModule)
+  },
+  // {
+  //   path: 'home-detail',
+  //   loadChildren: () => import('./screens/home-detail/home-detail.module').then( m => m.HomeDetailPageModule)
+  // }
+
 
 ];
 
