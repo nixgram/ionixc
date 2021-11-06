@@ -1,0 +1,13 @@
+:host{
+
+  ion-spinner{
+    transform: scale(3);
+  }
+  .loader-wrapper{
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

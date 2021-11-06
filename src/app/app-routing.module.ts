@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'app',
     loadChildren: () => import('./screens/tabs/tabs.module').then(m => m.TabsPageModule)
+  },  {
+    path: 'splash',
+    loadChildren: () => import('./screens/splash/splash.module').then( m => m.SplashPageModule)
   }
+
 ];
 
 @NgModule({
