@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ViewDidEnter } from "@ionic/angular";
-import { of } from "rxjs";
-import { delay } from "rxjs/operators";
+import { ViewDidEnter } from '@ionic/angular';
+import { of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-splash',
