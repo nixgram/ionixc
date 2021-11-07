@@ -2,34 +2,88 @@
   <ion-split-pane content-id="main-content">
     <ion-menu content-id="main-content">
       <ion-content>
-        <ion-list lines="none">
-          <ion-list-header>Apps</ion-list-header>
+        <ion-list class="mt-4">
+          <!--          <ion-list-header>Profile</ion-list-header>-->
+          <div class="profile-information-wrapper">
+            <img src="./assets/img/owner.jpg" alt="Owner Photo">
+            <ion-label>
+              <h3>Anis Khan <span>Owner</span></h3>
+              <p>+88 420 420</p>
+              <p>Flat 1202, Rupsha Building, RUAP</p>
+            </ion-label>
+          </div>
+
+          <div class="flex justify-center bg-pink-600 text-white rounded m-2">
+            <button class="p-2  text-sm font-medium" (click)="onProfileClick()">View Profile</button>
+          </div>
+        </ion-list>
+
+        <ion-list>
+          <ion-list-header>Options</ion-list-header>
           <!--@TODO : Auto menu generate-->
-          <ion-menu-toggle autoHide="false">
+          <ion-menu-toggle>
             <ion-item>
-              <ion-icon slot="start" name="people"></ion-icon>
-              <ion-label>Home</ion-label>
+              <ion-icon slot="start" name="business-outline"></ion-icon>
+              <ion-label>Flat</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item>
+              <ion-icon slot="start" name="people-outline"></ion-icon>
+              <ion-label>Members</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item>
+              <ion-icon slot="start" name="grid-outline"></ion-icon>
+              <ion-label>Dashboard</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item>
+              <ion-icon slot="start" name="receipt-outline"></ion-icon>
+              <ion-label>Report</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+
+        </ion-list>
+
+        <ion-list>
+          <ion-list-header>Preference</ion-list-header>
+          <!--@TODO : Auto menu generate-->
+          <ion-menu-toggle>
+            <ion-item>
+              <ion-icon slot="start" name="settings-outline"></ion-icon>
+              <ion-label>Settings</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+
         <ion-list>
           <ion-list-header>Account</ion-list-header>
           <!--@TODO : Auto menu generate-->
-          <ion-menu-toggle autoHide="false">
-            <ion-item routerLink="/login" detail="false">
-              <ion-icon slot="start" name="people"></ion-icon>
-              <ion-label>Login</ion-label>
+          <ion-menu-toggle>
+            <ion-item>
+              <ion-icon slot="start" name="open-outline"></ion-icon>
+              <ion-label>Invite</ion-label>
             </ion-item>
+          </ion-menu-toggle>
 
-            <ion-item routerLink="/signup" detail="false">
-              <ion-icon slot="start" name="people"></ion-icon>
-              <ion-label>Sign Up</ion-label>
+          <ion-menu-toggle>
+            <ion-item>
+              <ion-icon slot="start" name="log-out-outline"></ion-icon>
+              <ion-label>Sign out</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+
+
       </ion-content>
     </ion-menu>
-
     <!--@TODO : Main content router outlet-->
     <ion-router-outlet id="main-content"></ion-router-outlet>
 

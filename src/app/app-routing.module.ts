@@ -26,7 +26,15 @@ const routes: Routes = [
   {
     path: 'splash',
     loadChildren: () => import('./screens/splash/splash.module').then(m => m.SplashPageModule)
+  },  {
+    path: 'dashboard',
+    loadChildren: () => import('./screens/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
+  {
+    path: 'profile',
+    loadChildren: () => import('./screens/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+
   // {
   //   path: 'home-detail',
   //   loadChildren: () => import('./screens/home-detail/home-detail.module').then( m => m.HomeDetailPageModule)

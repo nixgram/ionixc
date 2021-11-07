@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private navController: NavController,
+              private menuController: MenuController) {
+  }
+
+  async onProfileClick() {
+    await this.menuController.close();
+    await this.navController.navigateForward('/profile');
+  }
 }

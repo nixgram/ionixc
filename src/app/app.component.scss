@@ -1,5 +1,46 @@
-ion-list-header{
-  font-size: 16px;
-  font-weight: 400;
+ion-list-header {
+  font-size: 0.85rem;
+  color: #d9248f;
+}
 
+
+.profile-information-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0.75rem;
+  margin-top: 0.75rem;
+  position: relative;
+
+  img {
+    height: 3.75rem;
+    width: 3.75rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 0.625rem;
+  }
+
+  ion-label {
+    h3 {
+      color: #95065b;
+      font-size: 1rem;
+      font-weight: 600;
+
+      span {
+        background: #05852c;
+        color: white;
+        border-radius: 1rem;
+        padding: 5px;
+        font-size: 0.75rem;
+        font-weight: lighter !important;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0 1rem
+      }
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
 }
